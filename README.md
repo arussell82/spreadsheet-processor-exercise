@@ -2,7 +2,12 @@
 This is an exercise for creating a spreadsheet processor that implements a method to get the total payment for an employees list.
 
 ## Input format
-The input is a nested array that must be in the following structure\
+The current code already has 3 examples of nested arrays with the proper structure\
+If  you need to add additional test, you can add the following line of code inside the class constructor
+
+- $this->assertEquals($inputArray, $expectedTotal);
+
+Where the *$inputArray* is a neested array with the information or structure below and the *$expectedTotal* is a float number with the sum of the monthly payment for all the employees.
 
 ### Employee structure:
 -	id (integer)
@@ -28,8 +33,7 @@ The input is a nested array that must be in the following structure\
 
 
 ## How to execute the code
-This code was written in PHP, in order to execute this code please follow the following instruccions\
-The current code already has 3 examples of nested arrays with the proper structure
+This code was written in PHP, in order to execute this code please follow the following instruccions
 
 1. Open [Coderpad SandBox](https://coderpad.io/languages/php/) using the PHP Online IDE & Code Editor
 2. Copy the code inside the "spreadsheet-processor.php" file
