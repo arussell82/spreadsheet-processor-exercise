@@ -76,15 +76,6 @@ class Solution {
         totalMonthlyPayment += employeePayment;
     }
 
-    public static boolean isDouble(String input) {
-        try {
-            Double.parseDouble(input);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
     // tester function
     private void assertEquals(Employee[] employeesList, double expectedTotal) {
 
