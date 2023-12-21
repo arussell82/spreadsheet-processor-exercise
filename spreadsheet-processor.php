@@ -119,7 +119,7 @@ class SpreadsheetProcessor
                 elseif ($employee['monthlyPayment'] < 0) { // employee monthly payment is negative
                     return  "The employee monthly payment is negative.";
                 }         
-                elseif (!is_int($employee['id'])) { // employee id is an int
+                elseif (!is_int($employee['id'])) { // employee id is not an int
                     return  "The employee id is not an integer number.";
                 } 
                 elseif ($employee['id'] <= 0) { // employee id is 0 or negative
@@ -129,9 +129,8 @@ class SpreadsheetProcessor
                     return  "The employee name is empty.";
                 } 
                 else {            
-                    $this->setTotalMontlyPayment($employee['monthlyPayment']);
+                    $this->setTotalMonthlyPayment($employee['monthlyPayment']);
                 }
-                        
             }
         }
 
@@ -145,7 +144,7 @@ class SpreadsheetProcessor
     }
 
     // total monthly payment setter
-    private function setTotalMontlyPayment($employeePayment) {
+    private function setTotalMonthlyPayment($employeePayment) {
         $this->totalMonthlyPayment += $employeePayment;
     }
 
